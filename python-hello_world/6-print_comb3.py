@@ -1,4 +1,6 @@
 for tens_digit in range(10):
     for ones_digit in range(tens_digit + 1, 10):
-        print(f"{tens_digit}{ones_digit:01d},", end="")
-        
+        if tens_digit != 8 or ones_digit != 9:
+            print("{}{:01d}, ".format(tens_digit,ones_digit), end="")    
+        else:
+            print("{}{:01d}".format(tens_digit,ones_digit), end="\n")
