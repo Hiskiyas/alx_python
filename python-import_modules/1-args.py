@@ -1,4 +1,4 @@
-#!/usr/bin/ python3 
+#!/usr/bin/ python3
 from sys import argv
 def print_arguments():
     if __name__ == "__main__":
@@ -11,4 +11,4 @@ def print_arguments():
             print(num_arguments, "arguments:")
         for i in range(1, len(argv)):
             print("{}: {}".format(i, argv[i]))
-print_arguments()   
+print_arguments()
