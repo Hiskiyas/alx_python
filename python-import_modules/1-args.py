@@ -9,6 +9,6 @@ def print_arguments():
         print(num_arguments, "argument:")
     else:
         print(num_arguments, "arguments:")
-        for i in range(1,len(argv)):
+    for i in range(1,len(argv)):
             print("{}: {}".format(i,argv[i]))
 print_arguments()
