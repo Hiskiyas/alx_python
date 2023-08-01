@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+This class Square defines a square based on 2-square.py
+   using a private instance attribute :size
+   property def size(self) : to retrieve it
+   property etter def size(self, value): to set it
+   public instance method def my_print(self): that prints in stdout the square with the charachter #
+"""
 class Square:
     """
     This class represents a square.
