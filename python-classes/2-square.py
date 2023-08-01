@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This class Square defines a square based on 1-square.py
+   using a private instance attribute :size
+   and another public instance method def area (self):
+"""
 class Square:
     """
     This class represents a square.
