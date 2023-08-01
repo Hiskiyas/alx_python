@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+This class Square defines a square based on 0-squaare.py
+   using a private instance attribute :size
+"""
 class Square:
     """
     This class represents a square.
