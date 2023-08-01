@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+This Project Writes a calss square that defines a square by:
+    Private instance Attribute: size
+    Instantiation with size(no type/value verification)
+    And no imported Module
+"""
 class Square:
     """
     This class represents a square.
