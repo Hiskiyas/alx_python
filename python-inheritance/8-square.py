@@ -64,7 +64,7 @@ class Rectangle(BaseGeometry):
         Returns the rectangle description.
 
         Returns:
-            str: The rectangle description in the format "[Rectangle] 
+            str: The rectangle description in the format "[Rectangle]
             <width>/<height>"
         """
         return f"[Rectangle] {self.__width}/{self.__height}"
