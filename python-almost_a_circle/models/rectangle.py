@@ -109,21 +109,20 @@ class Rectangle(Base):
             str: The string representation.
         """
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Assigns arguments to the attributes of the rectangle.
 
         Args:
-            *args: Variable number of arguments in the order: id, width, height, x, y.
+            *args: Variable number of positional arguments.
+            **kwargs: Variable number of keyword arguments as key/value pairs.
         """
-        num_args = len(args)
-        if num_args >= 1:
-            self.id = args[0]
-        if num_args >= 2:
-            self.width = args[1]
-        if num_args >= 3:
-            self.height = args[2]
-        if num_args >= 4:
-            self.x = args[3]
-        if num_args >= 5:
-            self.y = args[4]
+        if args:
+            attributes = ['id', 'width', 'height', 'x', 'y']
+            for i, arg in enumerate(args):
+                if i < len(attributes):
+                    setattr(self, attributes[i], arg)
+
+        if kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
