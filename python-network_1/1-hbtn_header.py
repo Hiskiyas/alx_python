@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+"""
+This script takes the URL and sends request to the URL 
+and it displays the value of the variable X-Request-Id.
+"""
 import requests
 import sys
 
