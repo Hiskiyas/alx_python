@@ -6,37 +6,18 @@ and it displays the value of the variable X-Request-Id.
 import requests
 import sys
 
-def fetch_request_id(url):
-    """
-    Fetches the value of the X-Request-Id variable from
-    the response header of a given URL.
+# Accept URL as a string argument
+url = sys.argv[1]
 
-    Args:
-        url (str): The URL to send the request to.
+# Send a GET request to the URL
+response = requests.get(url)
 
-    Returns:
-        str: The value of the X-Request-Id variable from
-        the response header.
-
-    Raises:
-        requests.exceptions.RequestException: If an error
-        occurs during the HTTP request.
-    """
-    response = requests.get(url)
-
-    if response.status_code == 200:
-        request_id = response.headers.get('X-Request-Id')
-        return request_id
-    else:
-        raise requests.exceptions.RequestException(f"Error: {response.status_code}")
-
-if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        print("Please provide a URL as a command-line argument.")
-    else:
-        url = sys.argv[1]
-        try:
-            request_id = fetch_request_id(url)
-            print(f"X-Request-Id: {request_id}")
-        except requests.exceptions.RequestException as e:
-            print(e)
+# Check if the request was successful (status code 200)
+if response.status_code == 200:
+    # Get the value of the X-Request-Id variable from the response header
+    request_id = response.headers.get('X-Request-Id')
+    # Print the value of X-Request-Id
+    print(f"X-Request-Id: {request_id}")
+else:
+    # Print an error message if the request was not successful
+    print(f"Error: {response.status_code}")
