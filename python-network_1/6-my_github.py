@@ -36,6 +36,6 @@ if __name__ == "__main__":
 
     try:
         user_id = get_user_id(username, password)
-        print(f"User ID: {user_id}")
+        print(f"{user_id}")
     except requests.exceptions.RequestException as e:
         print("Error:", str(e))
